@@ -1,6 +1,5 @@
 #!/usr/bin/env xcrun swift
 
-import Darwin
 import Foundation
 
 struct ANSIColors {
@@ -40,7 +39,7 @@ struct Config {
     
     func resetMatch(_ string: String) -> Bool {
         if let resetRegex = config.resetRegex {
-            if let _ = resetRegex.firstMatch(in: string, range: NSMakeRange(0, (string as NSString).length)) {
+            if let _ = resetRegex.firstMatch(in: string, range: NSMakeRange(0, string.count)) {
                 return true
             }
         }
