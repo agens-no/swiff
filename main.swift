@@ -48,10 +48,6 @@ struct Config {
     }
 }
 
-extension String {
-    
-}
-
 func usage(error: String) -> Never {
     let scriptLocation = CommandLine.arguments.first ?? "time-diff.swift"
     print(ANSIColors.red, "👉 ", error, ANSIColors.clear, separator: "")
@@ -135,15 +131,13 @@ func parseCLIArguments() -> Config {
 
 extension String {
     func leftPadding(toLength: Int, withPad character: Character) -> String {
-        if self.count < toLength {
-            return String(repeatElement(character, count: toLength - self.count)) + self
+        if count < toLength {
+            return String(repeating: character, count: toLength - count) + self
         } else {
             return self
         }
     }
 }
-
-
 
 func parseFastlaneDate(string: String) -> TimeInterval? {
     let scanner = Scanner(string: string)
