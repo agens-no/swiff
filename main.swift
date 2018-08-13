@@ -23,7 +23,7 @@ struct Config {
     var medium = 5
     var high = 10
     var summaryLimit = 20
-    var resetRegex: NSRegularExpression? = nil
+    var resetRegex: NSRegularExpression?
     
     func colorCode(duration: TimeInterval) -> String {
         switch Int(duration) {
@@ -39,12 +39,7 @@ struct Config {
     }
     
     func resetMatch(_ string: String) -> Bool {
-        if let resetRegex = config.resetRegex {
-            if let _ = resetRegex.firstMatch(in: string, range: NSMakeRange(0, string.count)) {
-                return true
-            }
-        }
-        return false
+        return config.resetRegex?.firstMatch(in: string, range: NSMakeRange(0, string.count)) != nil
     }
 }
 
@@ -162,8 +157,8 @@ class Chapter {
     }
     var name: String
     var offenders: [Offender] = []
-    var endTime: TimeInterval? = nil
-    var startTime: TimeInterval? = nil
+    var endTime: TimeInterval?
+    var startTime: TimeInterval?
     var duration: TimeInterval? {
         if let endTime = endTime, let startTime = startTime {
             return endTime - startTime
@@ -201,19 +196,19 @@ class Chapter {
     }
     
     func trim() {
-        while offenders.count > limit {
-            offenders.removeLast()
+        if offenders.count > limit {
+            offenders.removeLast(offenders.count - limit)
         }
     }
 }
 
 let config = parseCLIArguments()
-var lastTime: Double? = nil
-var time: Double? = nil
+var lastTime: Double?
+var time: Double?
 var chapter: Chapter = Chapter(name: "First chapter\n", limit: config.summaryLimit)
 var total: Chapter = Chapter(name: "Everything\n", limit: config.summaryLimit)
 var chapters: [Chapter] = [chapter]
-var lastLine: String? = nil
+var lastLine: String?
 while let line = readLine(strippingNewline: false) {
     switch config.diffMode {
     case .fastlane:
