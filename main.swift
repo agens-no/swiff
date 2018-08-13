@@ -26,13 +26,14 @@ struct Config {
     var resetRegex: NSRegularExpression? = nil
     
     func colorCode(duration: TimeInterval) -> String {
-        if Int(duration) >= high {
+        switch Int(duration) {
+        case high...:
             return ANSIColors.red
-        } else if Int(duration) >= medium {
+        case medium...:
             return ANSIColors.orange
-        } else if Int(duration) >= low {
+        case low...:
             return ANSIColors.yellow
-        } else {
+        default:
             return ANSIColors.grey
         }
     }
