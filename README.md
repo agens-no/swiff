@@ -2,7 +2,7 @@
 
 <img alt="" src="https://user-images.githubusercontent.com/3652587/43640738-5563b6f2-9721-11e8-97a4-4a2566b4290e.png">
 
-Why not let the computer do all that diffing of time stamps you tend do manually?
+Why not let the computer do all that diffing of timestamps you tend to do manually?
 
 ## 👋 Usage
 
@@ -35,6 +35,7 @@ cat build.log | swiff -f
 
 ### Summary
 Useful summmary at the end with most important highlights
+
 <img width="822" src="https://user-images.githubusercontent.com/3652587/43637715-4fe3df82-9716-11e8-9a75-ec43400024fb.png">
 
 
@@ -86,7 +87,7 @@ You may now type `./swiff help` from your current directory and use it like `fas
 
 ### Installation issues?
 
-Might be because of requirements: swift 4, Xcode, macOS
+Might be because of requirements: Swift 4, Xcode, macOS
 
 Open an issue and let me know!
 
