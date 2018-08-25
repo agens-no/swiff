@@ -126,11 +126,7 @@ func parseCLIArguments() -> Config {
 
 extension String {
     func leftPadding(toLength: Int, withPad character: Character) -> String {
-        if count < toLength {
-            return String(repeating: character, count: toLength - count) + self
-        } else {
-            return self
-        }
+        return count < toLength ? String(repeating: character, count: toLength - count) + self : self
     }
 }
 
