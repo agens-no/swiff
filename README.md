@@ -34,7 +34,7 @@ cat build.log | swiff -f
 ## 🤲 Example output
 
 ### Summary
-Useful summmary at the end with most important highlights
+Useful summary at the end with most important highlights
 
 <img width="822" src="https://user-images.githubusercontent.com/3652587/43637715-4fe3df82-9716-11e8-9a75-ec43400024fb.png">
 
