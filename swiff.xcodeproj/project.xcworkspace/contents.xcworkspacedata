@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/hfossli/Projects/swiff/swiff.xcodeproj">
+      location = "self:swiff.xcodeproj">
    </FileRef>
 </Workspace>
