@@ -53,7 +53,7 @@ You may now type `swiff help` from any directory in terminal to verify that the 
   
 1. Uses git to clone `swiff` to a directory `swiff` in your current directory
 2. moves in to the created `swiff` folder
-3. builds swift using the Makefile (basically compiling main.swift and installing `swiff` at `/usr/local/bin/swiff`)
+3. builds swift using the Makefile (basically compiling `Sources/swiff/main.swift` and installing `swiff` at `/usr/local/bin/swiff`)
 4. moves back out of the folder
 5. deletes the `swiff` folder
 
@@ -71,7 +71,7 @@ You may now type `swiff help` from any directory in terminal to verify that the 
 ### Locally by onliner
 
 ```sh
-curl --fail https://raw.githubusercontent.com/agens-no/swiff/master/main.swift > swiff.swift && swiftc -o swiff swiff.swift && rm swiff.swift
+curl --fail https://raw.githubusercontent.com/agens-no/swiff/master/Sources/swiff/main.swift > swiff.swift && swiftc -o swiff swiff.swift && rm swiff.swift
 ```
 
 You may now type `./swiff help` from your current directory and use it like `fastlane build | ./swiff -f`
@@ -79,11 +79,16 @@ You may now type `./swiff help` from your current directory and use it like `fas
 <details>
 <summary>What is the onliner doing?</summary>
   
-1. Uses curl to copy `main.swift` to a file called `swiff.swift` in your current directory
+1. Uses curl to copy `Sources/swiff/main.swift` to a file called `swiff.swift` in your current directory
 2. builds using your current swift tooling
 3. deletes swiff.swift
 
 </details>
+
+### Using [Mint](https://github.com/yonaskolb/mint):
+```
+$ mint install agens-no/swiff
+```
 
 ### Installation issues?
 
