@@ -1,11 +1,10 @@
 PREFIX?=/usr/local
 INSTALL_NAME = swiff
-SOURCE_FILE="Sources/swiff/main.swift"
 
 install: build install_bin
 
 build:
-	swiftc -o swiff ${SOURCE_FILE}
+	swiftc -o swiff main.swift
 
 install_bin:
 	mkdir -p $(PREFIX)/bin
