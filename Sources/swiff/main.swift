@@ -55,7 +55,7 @@ func usage(error: String) -> Never {
           -m, --medium                Threshold in seconds for medium duration color formatting (default: \(defaultConfig.medium))
           -h, --high                  Threshold in seconds for high duration color formatting (default: \(defaultConfig.high))
           -r, --reset-mark            String match to reset total counter (default: none)
-          -d, --diff-mode             Valid options is "live" or "fastlane (default: live)
+          -d, --diff-mode             Valid options is "live" or "fastlane" (default: live)
           -s, --summary-limit         Maximum number of lines in summary (default: \(defaultConfig.summaryLimit))
         
           -f, --fastlane              Shortcut for --diff-mode fastlane --reset-mark "Step :"
