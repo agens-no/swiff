@@ -49,11 +49,11 @@ git clone git@github.com:agens-no/swiff.git && cd swiff && make && cd .. && rm -
 You may now type `swiff help` from any directory in terminal to verify that the install is complete
 
 <details>
-<summary>What is the onliner doing?</summary>
+<summary>What is the oneliner doing?</summary>
   
 1. Uses git to clone `swiff` to a directory `swiff` in your current directory
 2. moves in to the created `swiff` folder
-3. builds swift using the Makefile (basically compiling `Sources/swiff/main.swift` and installing `swiff` at `/usr/local/bin/swiff`)
+3. builds `swiff` using the Makefile (basically compiling `Sources/swiff/main.swift` and installing `swiff` at `/usr/local/bin/swiff`)
 4. moves back out of the folder
 5. deletes the `swiff` folder
 
@@ -68,7 +68,7 @@ make
 
 You may now type `swiff help` from any directory in terminal to verify that the install is complete
 
-### Locally by onliner
+### Locally by oneliner
 
 ```sh
 curl --fail https://raw.githubusercontent.com/agens-no/swiff/master/Sources/swiff/main.swift > swiff.swift && swiftc -o swiff swiff.swift && rm swiff.swift
@@ -77,10 +77,10 @@ curl --fail https://raw.githubusercontent.com/agens-no/swiff/master/Sources/swif
 You may now type `./swiff help` from your current directory and use it like `fastlane build | ./swiff -f`
 
 <details>
-<summary>What is the onliner doing?</summary>
+<summary>What is the oneliner doing?</summary>
   
 1. Uses curl to copy `Sources/swiff/main.swift` to a file called `swiff.swift` in your current directory
-2. builds using your current swift tooling
+2. builds it using your current swift tooling
 3. deletes swiff.swift
 
 </details>
@@ -104,7 +104,7 @@ Usage: swiff [-l low] [-m medium] [-h high] [-r reset-mark] [-d diff-mode] [-s s
   -m, --medium                Threshold in seconds for medium duration color formatting (default: 5)
   -h, --high                  Threshold in seconds for high duration color formatting (default: 10)
   -r, --reset-mark            String match to reset total counter (default: none)
-  -d, --diff-mode             Valid options is "live" or "fastlane (default: live)
+  -d, --diff-mode             Valid options is "live" or "fastlane" (default: live)
   -s, --summary-limit         Maximum number of lines in summary (default: 20)
 
   -f, --fastlane              Shortcut for --diff-mode fastlane --reset-mark "Step :"
