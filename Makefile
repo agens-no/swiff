@@ -5,7 +5,7 @@ SOURCE_FILE="Sources/swiff/main.swift"
 install: build install_bin
 
 build:
-	swiftc -o swiff ${SOURCE_FILE}
+	xcrun swiftc -o swiff ${SOURCE_FILE}
 
 install_bin:
 	mkdir -p $(PREFIX)/bin
