@@ -94,7 +94,7 @@ $ mint install agens-no/swiff
 
 Might be because of requirements: Swift 4, Xcode, macOS
 
-Open an issue and let me know!
+[Create a new issue](https://github.com/agens-no/swiff/issues/new) and let me know!
 
 ## ✊ Advanced usage
 
