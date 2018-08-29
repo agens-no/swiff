@@ -30,6 +30,13 @@ Or maybe you have an old build log from fastlane?
 ```sh
 cat build.log | swiff -f
 ```
+(Swiff parses the timestamps produced by fastlane)
+
+### With xcodebuild
+
+```swift
+xcrun xcodebuild -project "MyApp.xcodeproj" -scheme "MyApp" | xcpretty | swiff
+```
 
 ## 🤲 Example output
 
