@@ -85,7 +85,7 @@ You may now type `./swiff help` from your current directory and use it like `fas
 
 </details>
 
-### Using [Mint](https://github.com/yonaskolb/mint):
+### Using [Mint](https://github.com/yonaskolb/mint)
 ```
 $ mint install agens-no/swiff
 ```
