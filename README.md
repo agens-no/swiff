@@ -1,3 +1,5 @@
+macOS only
+
 # swiff
 
 <img alt="" src="https://user-images.githubusercontent.com/3652587/43640738-5563b6f2-9721-11e8-97a4-4a2566b4290e.png">
